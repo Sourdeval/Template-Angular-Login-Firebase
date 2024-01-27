@@ -2,6 +2,8 @@
 :root {
     --theme-color-1: #d83a00;
     --theme-color-2: #ffe100;
+    --theme-color-3: whitesmoke;
+    --theme-color-4: gainsboro;
     --theme-fonts : 'Raleway', 'Trebuchet MS', Arial, sans-serif;
     --theme-font-color-1: whitesmoke;
     --theme-font-color-2: black;
@@ -30,7 +32,7 @@ section:nth-of-type(even){
 }
 
 /* All texts */
-h1, h2, h3, h4, h5, h6, input, span {
+html {
     font-family: var(--theme-fonts);
     margin: 0;
 }
@@ -155,10 +157,41 @@ div.spacer{
     background-color: red;
 }
 
+input, button {
+    border-radius: 8px;
+}
+
+input {
+    background: var(--theme-color-4);
+    font-size: 90%;
+}
+
+input:focus{
+    outline: solid 1px var(--theme-color-1);
+}
+
 button{
+    border: 1px solid black;
+    background-color: var(--theme-color-1);
     color: var(--theme-font-color-1);
+    font-size: 100%;
+    padding: 6px 12px;
+}
+
+button:hover{
+    transition: 0.4s background-color;
+    background-color: var(--theme-color-2);
+    cursor: pointer;
+}
+
+button:active{
+    transform: translateY(4px);
 }
 
 .mat-dialog-container{
     background: linear-gradient(0deg, var(--theme-color-1) 0%, var(--theme-color-2) 100%);
+}
+
+.card{
+    background: var(--theme-color-3);
 }
