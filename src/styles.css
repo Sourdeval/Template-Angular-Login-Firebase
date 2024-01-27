@@ -3,13 +3,30 @@
     --theme-color-1: #d83a00;
     --theme-color-2: #ffe100;
     --theme-fonts : 'Raleway', 'Trebuchet MS', Arial, sans-serif;
+    --theme-font-color-1: whitesmoke;
+    --theme-font-color-2: black;
 }
 
-html, body { height: 98%; }
+app-root{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+router-outlet {
+    display: none;
+}
+
+html, body { margin: 0; height: 100%;}
 
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#feccb1+0,f17432+50,ea5507+51,fb955e+100;Red+Gloss+%232 */
-body{
-    background: linear-gradient(180deg, var(--theme-color-1) 0%, var(--theme-color-2) 100%);
+section:nth-of-type(odd){
+    background: var(--theme-color-1);
+}
+
+section:nth-of-type(even){
+    background: var(--theme-color-2);
 }
 
 /* All texts */
@@ -20,7 +37,7 @@ h1, h2, h3, h4, h5, h6, input, span {
 
 /* Titles */
 h1, h2, h3, h5 {
-    color: whitesmoke;
+    color: var(--theme-font-color-1);
     margin: 12px;
 }
 
@@ -34,7 +51,7 @@ h3 {
 
 /* Key words */
 h4 {
-    color: black;
+    color: var(--theme-font-color-2);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -94,8 +111,8 @@ section {
     justify-content: space-evenly;
 }
 
-.black-text {
-    color: black;
+.second-color-text {
+    color: var(--theme-font-color-2);
     text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
 }
 
@@ -139,7 +156,7 @@ div.spacer{
 }
 
 button{
-    color: whitesmoke;
+    color: var(--theme-font-color-1);
 }
 
 .mat-dialog-container{
