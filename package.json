@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "pub": "ng deploy --base-href=/talf/"
+    "pub": "ng deploy --base-href=/Template-Angular-Login-Firebase/"
   },
   "private": true,
   "dependencies": {
